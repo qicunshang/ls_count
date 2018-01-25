@@ -9,7 +9,6 @@ git clone git@github.com:qicunshang/ls_count.git
 ```
 * 执行composer install安装依赖；
 * 导入ls_count数据库；
-* 复制/config/database-bak.php为/config/database.php然后修改相关配置；
 * 复制.env.example为.env然后修改相关配置；
 
 引用方法：

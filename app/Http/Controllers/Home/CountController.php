@@ -69,8 +69,9 @@ class CountController extends Controller
                         ['user_id', $userInfo->Id],
                         ['source_page', $params['source_page']],
                     ])
-                    ->first();
-                return ['data' => ['count'=> $count, 'page_count' => "$page_count->inv_count"], 'code'=>'200', 'msg' => 'success'];
+                    ->first('inv_count');
+                dd($page_count);
+                return ['data' => ['count'=> $count, 'page_count' => $page_count], 'code'=>'200', 'msg' => 'success'];
             }
         }else{
             return ['data' => null, 'code'=>'404', 'msg' => 'user is not found'];
